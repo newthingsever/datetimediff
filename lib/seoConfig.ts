@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'Date Time Calculator',
-  domain: 'dategap.com',
-  url: 'https://dategap.com',
+  domain: 'datetimediff.com',
+  url: 'https://datetimediff.com',
   tagline: 'Fast, Free Online Date & Time Calculators',
   description: 'Calculate exact date difference, time difference, days between dates, age, business days, and add or subtract dates instantly. Free, accurate, and 100% private with no registration required.',
   author: 'Date Time Calculator Team',

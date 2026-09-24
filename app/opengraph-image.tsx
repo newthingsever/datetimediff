@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/og';
 
+export const dynamic = 'force-static';
 export const alt = 'Date Time Calculator — Free Online Date & Time Calculators';
 export const size = {
   width: 1200,

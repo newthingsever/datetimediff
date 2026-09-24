@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { SITE_CONFIG } from '@/lib/seoConfig';
 
+export const dynamic = 'force-static';
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Date Time Calculator — Free Precision Date & Time Calculators',

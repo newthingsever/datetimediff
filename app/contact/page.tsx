@@ -37,10 +37,10 @@ export default function ContactPage() {
             For general feedback, press inquiries, and mathematical queries:
           </p>
           <a
-            href="mailto:contact@dategap.com"
+            href="mailto:contact@datetimediff.com"
             className="inline-block text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline"
           >
-            contact@dategap.com
+            contact@datetimediff.com
           </a>
         </div>
 

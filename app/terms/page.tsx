@@ -68,7 +68,7 @@ export default function TermsPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">6. Contact Information</h2>
           <p>
-            If you have questions regarding these terms, you may contact us at <a href="mailto:legal@dategap.com" className="text-blue-600 dark:text-blue-400 hover:underline">legal@dategap.com</a>.
+            If you have questions regarding these terms, you may contact us at <a href="mailto:legal@datetimediff.com" className="text-blue-600 dark:text-blue-400 hover:underline">legal@datetimediff.com</a>.
           </p>
         </section>
       </div>
