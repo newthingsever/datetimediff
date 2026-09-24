@@ -24,7 +24,7 @@ const routes = [
 
 async function runAudit() {
   console.log('====================================================');
-  console.log('  Date and Time Gap Automated Pre-Deployment Site Audit');
+  console.log('  Date Time Calculator Automated Pre-Deployment Site Audit');
   console.log('====================================================\n');
 
   let passed = 0;

@@ -1,4 +1,4 @@
-# DateGap — Universal Precision Date & Time Calculator Platform
+# Date Time Calculator — Universal Precision Date & Time Platform
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.1-black?logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.0-61dafb?logo=react)](https://react.dev/)
@@ -6,7 +6,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**DateGap** is a high-performance, privacy-first, zero-login global date and time calculator platform. Built with Next.js 15 App Router, React 19, and Tailwind CSS, all calculations are executed deterministically on the client with zero latency, zero tracking, and millisecond precision.
+**Date Time Calculator** is a high-performance, privacy-first, zero-login global date and time calculator platform. Built with Next.js 15 App Router, React 19, and Tailwind CSS, all calculations are executed deterministically on the client with zero latency, zero tracking, and millisecond precision.
 
 ---
 

@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Date and Time Gap — Free Online Date & Time Calculators';
+export const alt = 'Date Time Calculator — Free Online Date & Time Calculators';
 export const size = {
   width: 1200,
   height: 630,
@@ -42,7 +42,7 @@ export default async function Image() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span style={{ fontSize: '32px', fontWeight: 900, letterSpacing: '-0.02em' }}>
-              Date and Time Gap<span style={{ color: '#38bdf8' }}>.</span>
+              Date Time Calculator<span style={{ color: '#38bdf8' }}>.</span>
             </span>
             <span style={{ fontSize: '16px', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
               Fast • Free • 100% Private

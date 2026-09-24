@@ -31,7 +31,7 @@ export default function DaysBetweenCalculator() {
 
   return (
     <div className="w-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden transition-all">
-      <div className="p-6 sm:p-8 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
+      <div className="p-4 sm:p-8 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <span className="text-xs font-semibold uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full mb-2 inline-block">
@@ -50,14 +50,14 @@ export default function DaysBetweenCalculator() {
               setEndDate(futureIso);
               setIncludeEndDate(false);
             }}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-medium text-white transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-medium text-white transition-colors cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" /> Reset
           </button>
         </div>
       </div>
 
-      <div className="p-6 sm:p-8 space-y-6">
+      <div className="p-4 sm:p-8 space-y-5 sm:space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <div className="flex items-center justify-between">

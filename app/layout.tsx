@@ -1,9 +1,19 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { SITE_CONFIG } from '@/lib/seoConfig';
 import { LanguageProvider } from '@/lib/i18n';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#090d16' },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
@@ -22,8 +32,8 @@ export const metadata: Metadata = {
     'add days to date',
     'working days calculator',
   ],
-  authors: [{ name: 'Date and Time Gap Team' }],
-  creator: 'Date and Time Gap Team',
+  authors: [{ name: 'Date Time Calculator Team' }],
+  creator: 'Date Time Calculator Team',
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },

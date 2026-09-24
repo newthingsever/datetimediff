@@ -3,8 +3,8 @@ import { SITE_CONFIG } from '@/lib/seoConfig';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Date and Time Gap — Precision Date & Time Calculators',
-    short_name: 'Date and Time Gap',
+    name: 'Date Time Calculator — Free Precision Date & Time Calculators',
+    short_name: 'Date Time Calc',
     description: SITE_CONFIG.description,
     start_url: '/',
     display: 'standalone',
