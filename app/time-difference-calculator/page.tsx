@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ChevronRight, Clock, Zap, Shield, HelpCircle } from 'lucide-react';
+import { ChevronRight, Clock, Zap, Shield, HelpCircle, CheckCircle2 } from 'lucide-react';
 import TimeDifferenceCalculator from '@/components/calculators/TimeDifferenceCalculator';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import SeoContentSection from '@/components/SeoContentSection';
@@ -12,6 +12,15 @@ const meta = CALCULATORS_CATALOG['time-difference-calculator'];
 export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
+  keywords: [
+    'time difference calculator',
+    'hours between two times',
+    'elapsed time calculator',
+    'hours and minutes calculator',
+    'decimal hours for payroll',
+    'overnight shift calculator',
+    'timesheet hours counter',
+  ],
   alternates: {
     canonical: `${SITE_CONFIG.url}/time-difference-calculator`,
   },
@@ -19,6 +28,13 @@ export const metadata: Metadata = {
     title: meta.title,
     description: meta.description,
     url: `${SITE_CONFIG.url}/time-difference-calculator`,
+    siteName: SITE_CONFIG.name,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: meta.title,
+    description: meta.description,
   },
 };
 
@@ -89,10 +105,87 @@ export default function TimeDifferencePage() {
         <SeoContentSection
           toolName={meta.h1}
           faqs={meta.faqs}
-          guideTitle="How to Calculate Time Differences and Decimal Hours"
+          guideTitle="How to Calculate Elapsed Time & Decimal Hours (Formulas & Tables)"
+          guideContent={
+            <div className="space-y-6">
+              <p>
+                Calculating the exact time difference between two timestamps is fundamental for employee timesheets, contractor billing, travel durations, and fitness logs. Our <strong>Time Difference Calculator</strong> automatically handles both same-day spans and overnight shifts crossing midnight.
+              </p>
+
+              {/* The Overnight Shift Math */}
+              <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 space-y-2">
+                <h3 className="text-base font-bold text-slate-900 dark:text-white">
+                  How Overnight Shifts (Crossing Midnight) are Calculated
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                  When a shift begins in the evening (e.g. 10:00 PM / 22:00) and ends the next morning (e.g. 6:30 AM / 06:30), subtracting directly yields a negative value. The standard mathematical correction adds 24 hours (1,440 minutes) to the end timestamp:
+                </p>
+                <div className="p-3 rounded-xl bg-white dark:bg-slate-900 font-mono text-xs text-blue-700 dark:text-blue-300">
+                  Total Minutes = (End Hours × 60 + End Minutes + 1440) – (Start Hours × 60 + Start Minutes)
+                </div>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  For 22:00 to 06:30: (6.5 × 60 + 1440) – (22 × 60) = (390 + 1440) – 1320 = 1830 – 1320 = <strong>510 minutes = 8 hours and 30 minutes</strong>.
+                </p>
+              </div>
+
+              {/* Decimal Hours Reference Table */}
+              <div className="space-y-3">
+                <h3 className="text-base font-bold text-slate-900 dark:text-white">
+                  Quick Decimal Hours Conversion Reference (For Payroll & Timesheets)
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                  Payroll systems multiply hourly wage by decimal hours rather than hours and minutes. Below is the standard conversion reference:
+                </p>
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+                  <table className="w-full text-left text-xs sm:text-sm">
+                    <thead className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold">
+                      <tr>
+                        <th className="p-3">Minutes</th>
+                        <th className="p-3">Fraction of Hour</th>
+                        <th className="p-3">Decimal Hours</th>
+                        <th className="p-3">Example: 8 Hours + Minutes</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                      <tr>
+                        <td className="p-3 font-semibold">15 Minutes</td>
+                        <td className="p-3">15 / 60</td>
+                        <td className="p-3 font-mono font-bold text-blue-600 dark:text-blue-400">0.25 hrs</td>
+                        <td className="p-3">8.25 hrs</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 font-semibold">30 Minutes</td>
+                        <td className="p-3">30 / 60</td>
+                        <td className="p-3 font-mono font-bold text-blue-600 dark:text-blue-400">0.50 hrs</td>
+                        <td className="p-3">8.50 hrs</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 font-semibold">45 Minutes</td>
+                        <td className="p-3">45 / 60</td>
+                        <td className="p-3 font-mono font-bold text-blue-600 dark:text-blue-400">0.75 hrs</td>
+                        <td className="p-3">8.75 hrs</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 font-semibold">60 Minutes</td>
+                        <td className="p-3">60 / 60</td>
+                        <td className="p-3 font-mono font-bold text-blue-600 dark:text-blue-400">1.00 hrs</td>
+                        <td className="p-3">9.00 hrs</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Related Tools Links */}
+              <div className="pt-2">
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  Need to calculate multi-day spans? Switch to our flagship <Link href="/date-difference-calculator" className="text-blue-600 dark:text-blue-400 underline font-semibold">Date Difference Calculator</Link> or count business days with the <Link href="/business-days-calculator" className="text-blue-600 dark:text-blue-400 underline font-semibold">Business Days Calculator</Link>.
+                </p>
+              </div>
+            </div>
+          }
         />
       </div>
     </>
   );
 }
-

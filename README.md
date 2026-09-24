@@ -117,3 +117,4 @@ DateGap comes with a built-in automated test and audit suite:
 ## 📄 License
 
 MIT License. Free for personal and commercial use.
+

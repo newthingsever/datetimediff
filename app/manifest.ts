@@ -1,0 +1,31 @@
+import { MetadataRoute } from 'next';
+import { SITE_CONFIG } from '@/lib/seoConfig';
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: 'Date and Time Gap — Precision Date & Time Calculators',
+    short_name: 'Date and Time Gap',
+    description: SITE_CONFIG.description,
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#0f172a',
+    theme_color: '#2563eb',
+    icons: [
+      {
+        src: '/favicon.svg',
+        sizes: 'any',
+        type: 'image/svg+xml',
+      },
+      {
+        src: '/icon.svg',
+        sizes: 'any',
+        type: 'image/svg+xml',
+      },
+      {
+        src: '/favicon.ico',
+        sizes: '32x32',
+        type: 'image/x-icon',
+      },
+    ],
+  };
+}

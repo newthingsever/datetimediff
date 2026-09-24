@@ -110,6 +110,7 @@ export default function Footer() {
               <li><Link href="/disclaimer" className="hover:text-blue-600 dark:hover:text-blue-400">Mathematical Disclaimer</Link></li>
               <li><Link href="/sitemap" className="hover:text-blue-600 dark:hover:text-blue-400">HTML Sitemap</Link></li>
               <li><Link href="/sitemap.xml" target="_blank" className="hover:text-blue-600 dark:hover:text-blue-400">XML Sitemap</Link></li>
+              <li><Link href="/robots.txt" target="_blank" className="hover:text-blue-600 dark:hover:text-blue-400">Robots.txt Directive</Link></li>
             </ul>
           </div>
         </div>

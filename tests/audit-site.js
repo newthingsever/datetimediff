@@ -17,6 +17,8 @@ const routes = [
   { path: '/favicon.ico', expected: 200, name: 'Favicon ICO' },
   { path: '/favicon.svg', expected: 200, name: 'Favicon SVG' },
   { path: '/icon.svg', expected: 200, name: 'Next.js App Icon SVG' },
+  { path: '/manifest.webmanifest', expected: 200, name: 'PWA Web App Manifest' },
+  { path: '/opengraph-image', expected: 200, name: 'Dynamic OpenGraph Social Card' },
   { path: '/non-existent-route-for-testing-404', expected: 404, name: 'Custom 404 Page' },
 ];
 

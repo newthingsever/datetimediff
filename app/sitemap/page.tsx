@@ -77,7 +77,7 @@ export default function SitemapPage() {
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
           A comprehensive directory of all online date, time, and calendar calculation tools available on {SITE_CONFIG.name}.
         </p>
-        <div className="pt-2">
+        <div className="pt-2 flex flex-wrap items-center gap-4">
           <Link
             href="/sitemap.xml"
             target="_blank"
@@ -85,6 +85,14 @@ export default function SitemapPage() {
           >
             <Code className="w-3.5 h-3.5" />
             <span>View Machine-Readable XML Sitemap (/sitemap.xml)</span>
+          </Link>
+          <span className="text-slate-300 dark:text-slate-700">•</span>
+          <Link
+            href="/robots.txt"
+            target="_blank"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 hover:underline"
+          >
+            <span>View Robots.txt Directives (/robots.txt)</span>
           </Link>
         </div>
       </div>
