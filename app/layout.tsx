@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     'add days to date',
     'working days calculator',
   ],
-  authors: [{ name: 'DateGap Math Team' }],
-  creator: 'DateGap Math Team',
+  authors: [{ name: 'Date and Time Gap Team' }],
+  creator: 'Date and Time Gap Team',
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },

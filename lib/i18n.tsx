@@ -21,7 +21,7 @@ export const SUPPORTED_LOCALES: LocaleOption[] = [
 
 export const TRANSLATIONS: Record<SupportedLocale, Record<string, string>> = {
   en: {
-    appName: 'DateGap',
+    appName: 'Date and Time Gap',
     appTagline: 'Fast & Private',
     headlineTag: 'Fast, Free & No Account Needed',
     h1TitlePart1: 'How Many Years, Months and Days',
@@ -106,7 +106,7 @@ export const TRANSLATIONS: Record<SupportedLocale, Record<string, string>> = {
     calculateTimeDifference: 'Calculate Time Difference',
   },
   es: {
-    appName: 'DateGap',
+    appName: 'Date and Time Gap',
     appTagline: 'Rápido y Privado',
     headlineTag: 'Rápido, Gratis y Sin Registro',
     h1TitlePart1: 'Cuántos Años, Meses y Días',
@@ -191,7 +191,7 @@ export const TRANSLATIONS: Record<SupportedLocale, Record<string, string>> = {
     calculateTimeDifference: 'Calcular Diferencia de Tiempo',
   },
   hi: {
-    appName: 'DateGap',
+    appName: 'Date and Time Gap',
     appTagline: 'तेज़ और सुरक्षित',
     headlineTag: 'तेज़, मुफ़्त और बिना किसी लॉगिन के',
     h1TitlePart1: 'दो तिथियों के बीच कितने वर्ष, महीने और दिन हैं',
@@ -276,7 +276,7 @@ export const TRANSLATIONS: Record<SupportedLocale, Record<string, string>> = {
     calculateTimeDifference: 'समय अंतर निकालें',
   },
   fr: {
-    appName: 'DateGap',
+    appName: 'Date and Time Gap',
     appTagline: 'Rapide & Privé',
     headlineTag: 'Rapide, Gratuit & Sans Inscription',
     h1TitlePart1: "Combien d'années, de mois et de jours",
@@ -361,7 +361,7 @@ export const TRANSLATIONS: Record<SupportedLocale, Record<string, string>> = {
     calculateTimeDifference: 'Calculer la Différence de Temps',
   },
   de: {
-    appName: 'DateGap',
+    appName: 'Date and Time Gap',
     appTagline: 'Schnell & Privat',
     headlineTag: 'Schnell, Kostenlos & Ohne Anmeldung',
     h1TitlePart1: 'Wie viele Jahre, Monate und Tage',
@@ -446,7 +446,7 @@ export const TRANSLATIONS: Record<SupportedLocale, Record<string, string>> = {
     calculateTimeDifference: 'Zeitdifferenz Berechnen',
   },
   pt: {
-    appName: 'DateGap',
+    appName: 'Date and Time Gap',
     appTagline: 'Rápido e Privado',
     headlineTag: 'Rápido, Grátis e Sem Registro',
     h1TitlePart1: 'Quantos Anos, Meses e Dias',

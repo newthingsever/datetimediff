@@ -19,7 +19,7 @@ export default function ContactForm() {
         </div>
         <h3 className="font-bold text-slate-900 dark:text-white text-base">Thank you for your message!</h3>
         <p className="text-xs text-slate-600 dark:text-slate-300">
-          Our team reviews calculations and feedback daily. We appreciate your contribution to making DateGap better.
+          Our team reviews calculations and feedback daily. We appreciate your contribution to making Date and Time Gap better.
         </p>
       </div>
     );

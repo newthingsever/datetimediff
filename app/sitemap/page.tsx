@@ -4,8 +4,8 @@ import { Calendar, Clock, Sparkles, Calculator, Briefcase, FileText, Shield, Hel
 import { SITE_CONFIG } from '@/lib/seoConfig';
 
 export const metadata: Metadata = {
-  title: 'Sitemap – DateGap Calculators Directory',
-  description: 'Complete directory of all free date, days, age, and business calculators on DateGap.',
+  title: `Sitemap – ${SITE_CONFIG.name} Calculators Directory`,
+  description: `Complete directory of all free date, time, days, age, and business calculators on ${SITE_CONFIG.name}.`,
   alternates: {
     canonical: `${SITE_CONFIG.url}/sitemap`,
   },
@@ -58,10 +58,10 @@ export default function SitemapPage() {
   ];
 
   const LEGAL_PAGES = [
-    { name: 'About DateGap', href: '/about', desc: 'Our mission, architecture, and engineering principles.', icon: HelpCircle },
+    { name: `About ${SITE_CONFIG.name}`, href: '/about', desc: 'Our mission, architecture, and engineering principles.', icon: HelpCircle },
     { name: 'Contact & Support', href: '/contact', desc: 'Get in touch for questions, bug reports, and suggestions.', icon: FileText },
     { name: 'Privacy Policy', href: '/privacy-policy', desc: '100% private, client-side only calculation policy.', icon: Shield },
-    { name: 'Terms of Service', href: '/terms', desc: 'Terms governing the use of DateGap web utilities.', icon: FileText },
+    { name: 'Terms of Service', href: '/terms', desc: `Terms governing the use of ${SITE_CONFIG.name} web utilities.`, icon: FileText },
     { name: 'Disclaimer', href: '/disclaimer', desc: 'Legal and mathematical calculation disclaimers.', icon: FileText },
   ];
 
@@ -72,10 +72,10 @@ export default function SitemapPage() {
           <span>Website Directory</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
-          DateGap HTML Sitemap
+          {SITE_CONFIG.name} HTML Sitemap
         </h1>
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-          A comprehensive directory of all online date, time, and calendar calculation tools available on DateGap.
+          A comprehensive directory of all online date, time, and calendar calculation tools available on {SITE_CONFIG.name}.
         </p>
         <div className="pt-2">
           <Link

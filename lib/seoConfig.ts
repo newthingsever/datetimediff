@@ -1,10 +1,10 @@
 export const SITE_CONFIG = {
-  name: 'DateGap',
+  name: 'Date and Time Gap',
   domain: 'dategap.com',
   url: 'https://dategap.com',
   tagline: 'Fast, Free Online Date & Time Calculators',
-  description: 'Calculate exact date difference, days between dates, age, business days, and add or subtract dates instantly. Free, accurate, and 100% private with no registration required.',
-  author: 'DateGap Math Team',
+  description: 'Calculate exact date difference, time difference, days between dates, age, business days, and add or subtract dates instantly. Free, accurate, and 100% private with no registration required.',
+  author: 'Date and Time Gap Team',
   locale: 'en_US',
 };
 
