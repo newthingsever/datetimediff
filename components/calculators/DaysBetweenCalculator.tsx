@@ -74,6 +74,7 @@ export default function DaysBetweenCalculator() {
             </div>
             <input
               id="days-calc-start"
+              name="startDate"
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
@@ -97,6 +98,7 @@ export default function DaysBetweenCalculator() {
             </div>
             <input
               id="days-calc-end"
+              name="endDate"
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
@@ -106,8 +108,10 @@ export default function DaysBetweenCalculator() {
           </div>
         </div>
 
-        <label className="flex items-center gap-2.5 cursor-pointer text-sm font-medium text-slate-700 dark:text-slate-300 select-none">
+        <label htmlFor="days-include-end" className="flex items-center gap-2.5 cursor-pointer text-sm font-medium text-slate-700 dark:text-slate-300 select-none">
           <input
+            id="days-include-end"
+            name="includeEndDate"
             type="checkbox"
             checked={includeEndDate}
             onChange={(e) => setIncludeEndDate(e.target.checked)}

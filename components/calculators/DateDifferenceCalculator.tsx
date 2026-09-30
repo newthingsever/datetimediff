@@ -162,6 +162,7 @@ export default function DateDifferenceCalculator() {
             <div className="relative">
               <input
                 id="start-date"
+                name="startDate"
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
@@ -202,6 +203,7 @@ export default function DateDifferenceCalculator() {
             <div className="relative">
               <input
                 id="end-date"
+                name="endDate"
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
@@ -217,8 +219,10 @@ export default function DateDifferenceCalculator() {
         {/* Quick Presets & Options */}
         <div className="flex flex-wrap items-center justify-between gap-4 pt-1">
           {/* Checkbox: Include End Date */}
-          <label className="flex items-center gap-2.5 cursor-pointer text-sm font-medium text-slate-700 dark:text-slate-300 select-none">
+          <label htmlFor="include-end-date" className="flex items-center gap-2.5 cursor-pointer text-sm font-medium text-slate-700 dark:text-slate-300 select-none">
             <input
+              id="include-end-date"
+              name="includeEndDate"
               type="checkbox"
               checked={includeEndDate}
               onChange={(e) => setIncludeEndDate(e.target.checked)}

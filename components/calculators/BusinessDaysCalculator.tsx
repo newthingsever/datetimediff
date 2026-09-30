@@ -77,6 +77,7 @@ export default function BusinessDaysCalculator() {
             </div>
             <input
               id="biz-start"
+              name="startDate"
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
@@ -100,6 +101,7 @@ export default function BusinessDaysCalculator() {
             </div>
             <input
               id="biz-end"
+              name="endDate"
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
@@ -112,10 +114,12 @@ export default function BusinessDaysCalculator() {
         {/* Options Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
           <div>
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 block mb-1.5">
+            <label htmlFor="weekend-type" className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 block mb-1.5">
               Weekend Days
             </label>
             <select
+              id="weekend-type"
+              name="weekendType"
               value={weekendType}
               onChange={(e) => setWeekendType(e.target.value as any)}
               className="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium focus:ring-2 focus:ring-cyan-500 focus:outline-none"
@@ -127,8 +131,10 @@ export default function BusinessDaysCalculator() {
           </div>
 
           <div className="flex flex-col justify-end space-y-2">
-            <label className="flex items-center gap-2 cursor-pointer text-xs font-medium text-slate-700 dark:text-slate-300 select-none">
+            <label htmlFor="exclude-holidays" className="flex items-center gap-2 cursor-pointer text-xs font-medium text-slate-700 dark:text-slate-300 select-none">
               <input
+                id="exclude-holidays"
+                name="excludeHolidays"
                 type="checkbox"
                 checked={excludeHolidays}
                 onChange={(e) => setExcludeHolidays(e.target.checked)}
@@ -137,8 +143,10 @@ export default function BusinessDaysCalculator() {
               <span>Exclude Standard Public Holidays</span>
             </label>
 
-            <label className="flex items-center gap-2 cursor-pointer text-xs font-medium text-slate-700 dark:text-slate-300 select-none">
+            <label htmlFor="biz-include-end" className="flex items-center gap-2 cursor-pointer text-xs font-medium text-slate-700 dark:text-slate-300 select-none">
               <input
+                id="biz-include-end"
+                name="includeEndDate"
                 type="checkbox"
                 checked={includeEndDate}
                 onChange={(e) => setIncludeEndDate(e.target.checked)}

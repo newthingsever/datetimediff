@@ -188,6 +188,8 @@ export default function TimeDifferenceCalculator() {
 
             {mode === 'datetime' && (
               <input
+                id="time-start-date"
+                name="startDate"
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
@@ -198,6 +200,7 @@ export default function TimeDifferenceCalculator() {
             <div className="relative">
               <input
                 id="start-time"
+                name="startTime"
                 type="time"
                 value={startTime}
                 onChange={(e) => setStartTime(e.target.value)}
@@ -235,6 +238,8 @@ export default function TimeDifferenceCalculator() {
 
             {mode === 'datetime' && (
               <input
+                id="time-end-date"
+                name="endDate"
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
@@ -245,6 +250,7 @@ export default function TimeDifferenceCalculator() {
             <div className="relative">
               <input
                 id="end-time"
+                name="endTime"
                 type="time"
                 value={endTime}
                 onChange={(e) => setEndTime(e.target.value)}
@@ -257,8 +263,10 @@ export default function TimeDifferenceCalculator() {
         {/* Options & Quick Presets */}
         <div className="flex flex-wrap items-center justify-between gap-4 pt-1">
           {mode === 'time' && (
-            <label className="flex items-center gap-2.5 cursor-pointer text-sm font-medium text-slate-700 dark:text-slate-300 select-none">
+            <label htmlFor="crosses-midnight" className="flex items-center gap-2.5 cursor-pointer text-sm font-medium text-slate-700 dark:text-slate-300 select-none">
               <input
+                id="crosses-midnight"
+                name="crossesMidnight"
                 type="checkbox"
                 checked={crossesMidnight || isAutoOvernight}
                 onChange={(e) => setCrossesMidnight(e.target.checked)}

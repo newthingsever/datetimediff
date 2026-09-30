@@ -34,7 +34,9 @@ export default function ContactForm() {
           </label>
           <input
             id="contact-name"
+            name="name"
             type="text"
+            autoComplete="name"
             required
             placeholder="Alex Morgan"
             className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-base sm:text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -46,7 +48,9 @@ export default function ContactForm() {
           </label>
           <input
             id="contact-email"
+            name="email"
             type="email"
+            autoComplete="email"
             required
             placeholder="alex@example.com"
             className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-base sm:text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -60,6 +64,7 @@ export default function ContactForm() {
         </label>
         <select
           id="contact-subject"
+          name="subject"
           className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-base sm:text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
         >
           <option value="feedback">General Feedback</option>
@@ -75,6 +80,7 @@ export default function ContactForm() {
         </label>
         <textarea
           id="contact-message"
+          name="message"
           rows={4}
           required
           placeholder="Tell us what you'd like to see or report..."

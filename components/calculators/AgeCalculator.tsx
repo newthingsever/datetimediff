@@ -58,6 +58,7 @@ export default function AgeCalculator() {
             </label>
             <input
               id="birth-date"
+              name="birthDate"
               type="date"
               value={birthDate}
               onChange={(e) => setBirthDate(e.target.value)}
@@ -83,6 +84,7 @@ export default function AgeCalculator() {
             </div>
             <input
               id="age-as-of-date"
+              name="asOfDate"
               type="date"
               value={asOfDate}
               onChange={(e) => setAsOfDate(e.target.value)}

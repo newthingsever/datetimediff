@@ -82,6 +82,7 @@ export default function DateAddSubtractCalculator() {
             </div>
             <input
               id="add-sub-start"
+              name="startDate"
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
@@ -128,8 +129,10 @@ export default function DateAddSubtractCalculator() {
           </label>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <div>
-              <span className="text-[11px] font-semibold text-slate-500 block mb-1">Years</span>
+              <label htmlFor="add-sub-years" className="text-[11px] font-semibold text-slate-500 block mb-1">Years</label>
               <input
+                id="add-sub-years"
+                name="years"
                 type="number"
                 min="0"
                 value={years || ''}
@@ -139,8 +142,10 @@ export default function DateAddSubtractCalculator() {
               />
             </div>
             <div>
-              <span className="text-[11px] font-semibold text-slate-500 block mb-1">Months</span>
+              <label htmlFor="add-sub-months" className="text-[11px] font-semibold text-slate-500 block mb-1">Months</label>
               <input
+                id="add-sub-months"
+                name="months"
                 type="number"
                 min="0"
                 value={months || ''}
@@ -150,8 +155,10 @@ export default function DateAddSubtractCalculator() {
               />
             </div>
             <div>
-              <span className="text-[11px] font-semibold text-slate-500 block mb-1">Weeks</span>
+              <label htmlFor="add-sub-weeks" className="text-[11px] font-semibold text-slate-500 block mb-1">Weeks</label>
               <input
+                id="add-sub-weeks"
+                name="weeks"
                 type="number"
                 min="0"
                 value={weeks || ''}
@@ -161,8 +168,10 @@ export default function DateAddSubtractCalculator() {
               />
             </div>
             <div>
-              <span className="text-[11px] font-semibold text-slate-500 block mb-1">Days</span>
+              <label htmlFor="add-sub-days" className="text-[11px] font-semibold text-slate-500 block mb-1">Days</label>
               <input
+                id="add-sub-days"
+                name="days"
                 type="number"
                 min="0"
                 value={days || ''}
